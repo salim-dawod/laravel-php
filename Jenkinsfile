@@ -8,6 +8,23 @@ pipeline {
             }
         }
         stage('Build PHP docker image') {
+            environment {
+                APP_NAME = "laravel"
+                APP_ENV = "local"
+                APP_KEY = ""
+                APP_DEBUG = "true"
+                APP_URL = "http://localhost"
+                LOG_CHANNEL = "stack"
+                LOG_DEPRECATIONS_CHANNEL = "null"
+                LOG_LEVEL = "debug"
+                DB_CONNECTION = "mysql"
+                DB_HOST = "db"
+                DB_PORT = "3306"
+                DB_DATABASE = "laravel_db"
+                DB_USERNAME = "salim"
+                DB_PASSWORD = "ChangeMe"
+            }
+
             steps {
                 sh '''
                     echo "APP_NAME=${APP_NAME}" > .env
