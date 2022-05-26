@@ -27,7 +27,7 @@ pipeline {
 
             steps {
                 sh '''
-                    cat <<EOF > .env
+                    cat <<'EOF' >.env
                     APP_NAME = ${APP_NAME}
                     APP_ENV = ${APP_ENV}
                     APP_KEY = ${APP_KEY}
