@@ -28,21 +28,21 @@ pipeline {
             steps {
                 sh '''
                     cat <<'EOF' >.env
-                    APP_NAME = ${APP_NAME}
-                    APP_ENV = ${APP_ENV}
-                    APP_KEY = ${APP_KEY}
-                    APP_DEBUG = ${APP_DEBUG}
-                    APP_URL = ${APP_URL}
-                    LOG_CHANNEL = ${LOG_CHANNEL}
-                    LOG_DEPRECATIONS_CHANNEL = ${LOG_DEPRECATIONS_CHANNEL}
-                    LOG_LEVEL = ${LOG_LEVEL}
-                    DB_CONNECTION = ${DB_CONNECTION}
-                    DB_HOST = ${DB_HOST}
-                    DB_PORT = ${DB_PORT}
-                    DB_DATABASE = ${DB_DATABASE}
-                    DB_USERNAME = ${DB_USERNAME}
-                    DB_PASSWORD = ${DB_PASSWORD}
-                    EOF
+                    > APP_NAME = ${APP_NAME}
+                    > APP_ENV = ${APP_ENV}
+                    > APP_KEY = ${APP_KEY}
+                    > APP_DEBUG = ${APP_DEBUG}
+                    > APP_URL = ${APP_URL}
+                    > LOG_CHANNEL = ${LOG_CHANNEL}
+                    > LOG_DEPRECATIONS_CHANNEL = ${LOG_DEPRECATIONS_CHANNEL}
+                    > LOG_LEVEL = ${LOG_LEVEL}
+                    > DB_CONNECTION = ${DB_CONNECTION}
+                    > DB_HOST = ${DB_HOST}
+                    > DB_PORT = ${DB_PORT}
+                    > DB_DATABASE = ${DB_DATABASE}
+                    > DB_USERNAME = ${DB_USERNAME}
+                    > DB_PASSWORD = ${DB_PASSWORD}
+                    > EOF
                     docker build -t salimdawod1996/php-fpm:1.0 .
                 '''
             }
