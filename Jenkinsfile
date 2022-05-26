@@ -22,7 +22,7 @@ pipeline {
                 DB_PORT = "3306"
                 DB_DATABASE = "laravel_db"
                 DB_USERNAME = "salim"
-                DB_PASSWORD = "ChangeMe"
+                DB_PASSWORD = credentials('db_password')
             }
 
             steps {
